@@ -1,41 +1,28 @@
-.players {
+.startersBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.starter {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* justify-content: center;
-  align-items: center; */
-}
-
-.starter {
-  width: 350px;
-  height: 370px;
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  /* margin-bottom: 200px; */
-  align-items: center;
-  border-radius: 5px;
   background-image: linear-gradient(
-    to bottom,
-    rgba(206, 106, 106, 0.5),
-    rgba(0, 0, 255, 0.5)
+    to left top,
+    rgb(67, 192, 63),
+    rgb(235, 198, 198)
   );
-  box-shadow: 0px 0px 5px 2px black;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-}
-
-.playerPic {
-  width: 230px;
-  height: 230px;
-  padding: 10px;
-  border-radius: 15px;
-}
-
-button {
-  margin: 5px;
+  height: 390px;
+  width: 250px;
+  border-radius: 5px;
 }

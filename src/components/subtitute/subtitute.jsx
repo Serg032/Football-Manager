@@ -2,17 +2,21 @@ import React from "react";
 import { connect } from "react-redux";
 import './subtitute.css'
 import { Button } from "@mui/material";
+import { Avatar } from "@mui/material";
 
 
 const Subtitute = ({subtitute, removeSubtitute}) => (
-    <section className="players">
+    <div className="subtituteBox">
         <h2>Subtitute Players</h2>
-        <div className="field">
+        <section className="subtitutes"> 
+        <div className="bench">
             {
                 subtitute.map(s => (
-                    <article className="player" key={s.id}>
+                    <article className="subitute" key={s.id}>
                         <div>
-                            <img
+                            <Avatar
+                                sx={{width:200, height:200}}
+                                variant="rounded"
                                 className="playerPic"
                                 src={s.pic}
                                 alt={s.name}
@@ -33,6 +37,8 @@ const Subtitute = ({subtitute, removeSubtitute}) => (
             }
         </div>
     </section>
+    </div>
+    
 )
 
 const mapStateToProps = state => ({

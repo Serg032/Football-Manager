@@ -1,37 +1,42 @@
 import React from "react";
 import { connect } from "react-redux";
 import './starting.css'
-import { Button } from "@mui/material";
+import { Avatar, Button } from "@mui/material";
 
 
 const Starting = ({starting, removePlayer}) => (
-    <section className="players">
+    <div className="startersBox">
         <h2>Starting Players</h2>
-        <div className="field">
-            {
-                starting.map(s => (
-                    <article className="starter" key={s.id}>
-                        <div className="main">
-                            <img 
-                                className="playerPic"
-                                src={s.pic}
-                                alt={s.name}
-                                />
-                            
-                        </div>
-                        <h3>{s.name}</h3>
-                        <Button
-                            variant="contained"
-                            color='secondary'
-                            onClick={() => removePlayer(s)}
-                        >
-                            X
-                        </Button> 
-                    </article>
-                ))
-            }
-        </div>
-    </section>
+        <section className="starters">
+                <div className="field">
+                    {
+                        starting.map(s => (
+                            <article className="starter" key={s.id}>
+                                <div className="main">
+                                    <Avatar
+                                        sx={{width:200, height:200}}
+                                        variant="rounded" 
+                                        className="playerPic"
+                                        src={s.pic}
+                                        alt={s.name}
+                                        />
+                                    
+                                </div>
+                                <h3>{s.name}</h3>
+                                <Button
+                                    variant="contained"
+                                    color='secondary'
+                                    onClick={() => removePlayer(s)}
+                                >
+                                    X
+                                </Button> 
+                            </article>
+                        ))
+                    }
+                </div>
+        </section>
+    </div>
+    
 )
 
 const mapStateToProps = state => ({

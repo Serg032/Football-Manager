@@ -3,16 +3,20 @@ import { connect } from "react-redux";
 import "./players.css"
 import { Button } from "@mui/material";
 import { Paper } from "@mui/material";
+import { Avatar } from "@mui/material";
 
 const Players = ({players, addStarter, addSubtitute}) => (
-
+    <div className="playerBox">
+        <h2>Players</h2>
         <section className="players">
-            <h2>Players</h2>
+            
             {
                 players.map(player => (
                     <div className="player" key={player.id}>
                         <div>
-                            <img
+                            <Avatar
+                                sx={{width:200, height:200}}
+                                variant="rounded"
                                 className="playerPic"
                                 src={player.pic}
                                 alt={player.name}
@@ -52,6 +56,9 @@ const Players = ({players, addStarter, addSubtitute}) => (
             }
             
         </section>
+    </div>
+
+        
     
 )
 
