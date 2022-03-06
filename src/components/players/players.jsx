@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import "./players.css"
 import { Button } from "@mui/material";
-import { Paper } from "@mui/material";
+
 import { Avatar } from "@mui/material";
 
 const Players = ({players, addStarter, addSubtitute}) => (
